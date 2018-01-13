@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/assets"><file name="Rosario-Regular.ttf" path="/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/assets/Rosario-Regular.ttf"/></source><source path="/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/debug/assets"/></dataSet></merger>

@@ -1,0 +1,19 @@
+#Sat Jan 13 14:05:34 MSK 2018
+path.1=classes.dex
+path.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.5=/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/intermediates/transforms/dexMerger/debug/24
+base.4=/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/intermediates/transforms/dexMerger/debug/22
+base.3=/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/intermediates/transforms/dexMerger/debug/19
+base.2=/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/intermediates/transforms/dexMerger/debug/23
+base.1=/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/intermediates/transforms/dexMerger/debug/20
+base.0=/Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/build/intermediates/transforms/dexMerger/debug/21
+path.5=classes.dex
+path.4=classes.dex
+path.3=classes.dex
+path.2=classes.dex

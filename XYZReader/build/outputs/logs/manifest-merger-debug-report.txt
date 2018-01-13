@@ -1,0 +1,223 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:1:1-48:12
+MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:1:1-48:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:1:1-48:12
+	package
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:2:5-36
+	android:versionName
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:4:5-30
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.BROADCAST_STICKY
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:8:5-75
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:8:22-72
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:9:22-76
+application
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:11:5-46:19
+MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:24:5-28:19
+	android:label
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:14:9-41
+	android:icon
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:13:9-43
+	android:allowBackup
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:15:9-43
+activity#com.example.xyzreader.ui.ArticleListActivity
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:17:9-24:20
+	android:label
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:19:13-45
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:18:13-51
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:20:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:22:27-74
+activity#com.example.xyzreader.ui.ArticleDetailActivity
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:26:9-37:20
+	android:parentActivityName
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:28:13-65
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:27:13-53
+intent-filter#android.intent.action.VIEW+android.intent.category.DEFAULT
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:29:13-33:29
+action#android.intent.action.VIEW
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:30:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:31:27-73
+data
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:32:17-100
+	android:mimeType
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:32:23-97
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:34:13-36:59
+	android:value
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:36:17-56
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:35:17-63
+service#com.example.xyzreader.data.UpdaterService
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:39:9-40:40
+	android:exported
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:39:18-53
+provider#com.example.xyzreader.data.ItemsProvider
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:42:9-44:40
+	android:authorities
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:43:13-56
+	android:exported
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:44:13-37
+	android:name
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml:42:19-53
+uses-sdk
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/XYZReader/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/62c2957f0951145c8e9e11f096360f7b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:palette-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/cc067679f57fbca674e2e2cc177ee2ec/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/09a15196e7f3fdd35680a2312b4301bc/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.1.0.aar/42f50d4ba92505d884d2288c33e3f044/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/92b6bb421044014fedec28ba8a81f7b3/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/d992007c28c320974122ae92ce4a529e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/1de658e566d64be9830e673724620e29/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/10cb516cbde4a093d514606a744be6d6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:26:13-58
