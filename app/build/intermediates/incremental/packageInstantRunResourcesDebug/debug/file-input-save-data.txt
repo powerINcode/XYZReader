@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Jan 16 22:03:42 MSK 2018
+0.baseType=DIRECTORY
+0.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/assets/debug
+0.path=Rosario-Regular.ttf
+0.set=ASSET
+count=1

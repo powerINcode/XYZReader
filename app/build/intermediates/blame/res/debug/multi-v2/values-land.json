@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5082c5ff6d5ef2c9ee5b7cda16f3caf5/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "8",
+                        "startColumns": "4",
+                        "startOffsets": "438",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "615"
+                    }
+                },
+                {
+                    "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/values-land/macro_layout.xml",
+                    "from": {
+                        "startLines": "3,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "88,36",
+                        "endColumns": "57,51",
+                        "endOffsets": "141,83"
+                    },
+                    "to": {
+                        "startLines": "6,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "328,386",
+                        "endColumns": "57,51",
+                        "endOffsets": "381,433"
+                    }
+                },
+                {
+                    "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        }
+    ]
+}
