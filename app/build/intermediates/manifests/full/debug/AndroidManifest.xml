@@ -19,7 +19,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:testOnly="true"
-        android:theme="@style/Theme.Bacon" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.materialdesignapp.ui.ArticleListActivity"
             android:label="@string/app_name" >
@@ -31,6 +31,9 @@
         </activity>
         <activity
             android:name="com.example.materialdesignapp.ui.ArticleDetailActivity"
+            android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity" />
+        <activity
+            android:name="com.example.materialdesignapp.ui.ArticleDetailActivity2"
             android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -53,6 +56,8 @@
             android:name="com.example.materialdesignapp.data.ItemsProvider"
             android:authorities="com.example.materialdesignapp"
             android:exported="false" />
+
+        <activity android:name="com.example.materialdesignapp.ui.ActivityTaleDetail" />
 
         <meta-data
             android:name="android.support.VERSION"

@@ -1,10 +1,13 @@
 package com.example.materialdesignapp.ui;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
+import com.example.materialdesignapp.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -16,34 +19,33 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class ImageLoader extends FrameLayout {
+    private boolean mIsCircle = true;
+    private ProgressBar mProgressBar;
+    private CircleImageView mCircleImageView;
+
     public ImageLoader(Context context) {
         super(context);
-        setup();
+        setup(context, null, 0);
     }
 
     public ImageLoader(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setup();
+        setup(context, attrs, 0);
     }
 
     public ImageLoader(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setup();
+        setup(context, attrs, defStyle);
     }
 
     public void initialize(String url) {
-        final CircleImageView circleImageView = new CircleImageView(getContext());
-        circleImageView.setVisibility(GONE);
-        addView(circleImageView);
 
-        final ProgressBar progressBar = new ProgressBar(getContext());
-        addView(progressBar);
-
-        Picasso.with(getContext()).load(url).into(circleImageView, new Callback() {
+        mProgressBar.setVisibility(VISIBLE);
+        Picasso.with(getContext()).load(url).into(mCircleImageView, new Callback() {
             @Override
             public void onSuccess() {
-                circleImageView.setVisibility(VISIBLE);
-                progressBar.setVisibility(GONE);
+                mCircleImageView.setVisibility(VISIBLE);
+                mProgressBar.setVisibility(INVISIBLE);
             }
 
             @Override
@@ -53,7 +55,23 @@ public class ImageLoader extends FrameLayout {
         });
     }
 
-    private void setup() {
+    private void setup(Context context, AttributeSet attrs, int defStyle) {
+        mCircleImageView = new CircleImageView(getContext());
+        mCircleImageView.setVisibility(INVISIBLE);
+        addView(mCircleImageView);
 
+        mProgressBar = new ProgressBar(getContext());
+        mProgressBar.setLayoutParams(new LayoutParams(200, 200, Gravity.CENTER));
+        addView(mProgressBar);
+
+
+
+        TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.ImageLoader, 0, 0);
+        try {
+            mIsCircle = ta.getBoolean(R.styleable.ImageLoader_isCircle, true);
+            mCircleImageView.setDisableCircularTransformation(!mIsCircle);
+        } finally {
+            ta.recycle();
+        }
     }
 }

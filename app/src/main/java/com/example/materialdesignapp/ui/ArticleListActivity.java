@@ -7,14 +7,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -25,16 +22,13 @@ import android.widget.TextView;
 
 import com.example.materialdesignapp.R;
 import com.example.materialdesignapp.data.ArticleLoader;
-import com.example.materialdesignapp.data.ItemsContract;
+import com.example.materialdesignapp.data.Tale;
 import com.example.materialdesignapp.data.UpdaterService;
-import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for
@@ -183,13 +177,20 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = getLayoutInflater().inflate(R.layout.list_item_article2, parent, false);
+            View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+//                    startActivity(new Intent(Intent.ACTION_VIEW,
+//                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+
+                    Intent intent = new Intent(ArticleListActivity.this, ActivityTaleDetail.class);
+                    if (mCursor.moveToPosition(vh.getAdapterPosition())) {
+                        intent.putExtra(ActivityTaleDetail.BUNDLE_TALE, new Tale(mCursor));
+                        startActivity(intent);
+                    }
+
                 }
             });
             return vh;

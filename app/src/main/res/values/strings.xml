@@ -9,5 +9,6 @@
 
     <string name="up">Up</string>
     <string name="title_activity_tmp">tmp</string>
+    <string name="tale_description">Written by %1$s in %2$s</string>
 
 </resources>

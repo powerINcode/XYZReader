@@ -13,9 +13,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Bacon">
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.materialdesignapp.ui.ArticleListActivity"
+            android:name=".ui.ArticleListActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +24,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.materialdesignapp.ui.ArticleDetailActivity"
-            android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity">
+            android:name=".ui.ArticleDetailActivity"
+            android:parentActivityName=".ui.ArticleListActivity" />
+        <activity
+            android:name=".ui.ArticleDetailActivity2"
+            android:parentActivityName=".ui.ArticleListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -40,13 +43,15 @@
         </activity>
 
         <service
-            android:name="com.example.materialdesignapp.data.UpdaterService"
+            android:name=".data.UpdaterService"
             android:exported="false" />
 
         <provider
-            android:name="com.example.materialdesignapp.data.ItemsProvider"
+            android:name=".data.ItemsProvider"
             android:authorities="com.example.materialdesignapp"
             android:exported="false" />
+
+        <activity android:name=".ui.ActivityTaleDetail"></activity>
     </application>
 
 </manifest>
