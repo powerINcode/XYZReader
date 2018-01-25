@@ -10,7 +10,7 @@ import static com.example.materialdesignapp.data.AppContentProvider.Tables;
 
 public class AppDb extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "xyzreader.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
 
     public AppDb(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -32,7 +32,7 @@ public class AppDb extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE " + Tables.TALE_PROGRESS + " ("
                 + TaleProgressEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + TaleProgressEntry.TALE_ID + " INTEGER NOT NULL,"
+                + TaleProgressEntry.TALE_ID + " INTEGER NOT NULL UNIQUE,"
                 + TaleProgressEntry.PAGE + " INTEGER NOT NULL DEFAULT 0"
                 + ")" );
 

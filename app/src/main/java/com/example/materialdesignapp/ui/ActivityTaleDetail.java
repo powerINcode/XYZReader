@@ -2,10 +2,12 @@ package com.example.materialdesignapp.ui;
 
 import android.annotation.SuppressLint;
 import android.app.LoaderManager;
+import android.content.ContentValues;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
@@ -22,16 +24,23 @@ import com.example.materialdesignapp.R;
 import com.example.materialdesignapp.data.ArticleLoader;
 import com.example.materialdesignapp.data.Tale;
 import com.example.materialdesignapp.data.TalePager;
-import android.support.v4.app.Fragment;
+import com.example.materialdesignapp.data.TaleProgress;
+import com.example.materialdesignapp.data.TaleProgressContract;
+import com.example.materialdesignapp.data.TaleProgressContract.TaleProgressEntry;
+import com.example.materialdesignapp.data.TaleProgressLoader;
 
 public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.OnPageChangeListener,
         LoaderManager.LoaderCallbacks<Cursor>{
+
+    public final static int LOADER_TALE = 1000;
+    public final static int LOADER_TALE_PROGRESS = 1001;
 
     public final static String EXTRA_TALE_ID = "EXTRA_TALE_ID";
     public final static String BUNDLE_TALE = "BUNDLE_TALE";
 
     private long mTaleId;
     private Tale mTale;
+    private TaleProgress mTaleProgress;
     private ViewPager mViewPager;
     private TextView mPageTextView;
     private PageAdapter mAdapter;
@@ -73,9 +82,21 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
             public void onGlobalLayout() {
                 mPageTextView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 if (mTale == null) {
-                    getLoaderManager().initLoader(0, null, ActivityTaleDetail.this);
+                    startTaleLoader();
                 } else {
                     onTaleLoaded();
+                }
+
+                if (mTale == null) {
+                    startTaleLoader();
+                } else {
+                    onTaleLoaded();
+                }
+
+                if (mTaleProgress == null) {
+                    startTaleProgressLoader();
+                } else {
+                    onTaleProgressLoaded();
                 }
             }
         });
@@ -98,6 +119,7 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
         outState.putParcelable(BUNDLE_TALE, mTale);
     }
 
+    //region PagerView events
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         if (position == 0) {
@@ -116,28 +138,68 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
     public void onPageScrollStateChanged(int state) {
 
     }
+    //endregion
 
-
-
+    //region TaleLoader
     @Override
-    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        return ArticleLoader.newInstanceForItemId(this, mTaleId);
+    public Loader<Cursor> onCreateLoader(int id, Bundle bundle) {
+        if (id == LOADER_TALE) {
+            return ArticleLoader.newInstanceForItemId(this, mTaleId);
+        } else {
+            return TaleProgressLoader.newInstanceForTaleId(this, mTaleId);
+        }
     }
 
     @SuppressLint("StaticFieldLeak")
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
-        if (cursor != null) {
-            cursor.moveToFirst();
+        if (cursor == null) {
+            return;
+        }
 
-            mTale = new Tale(cursor);
+        cursor.moveToFirst();
 
-            onTaleLoaded();
+        switch (loader.getId()) {
+            case LOADER_TALE:
+                    mTale = new Tale(cursor);
+                    onTaleLoaded();
+                    break;
+            case LOADER_TALE_PROGRESS:
+                if (cursor.getCount() == 0) {
+                    long id = TaleProgressEntry.insert(getContentResolver(), mTaleId);
+                    mTaleProgress = new TaleProgress(id, mTaleId, 0);
+                } else {
+                    mTaleProgress = new TaleProgress(cursor);
+                }
+                onTaleProgressLoaded();
+                break;
         }
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
+
+    }
+
+    //endregion
+
+    private void startTaleLoader() {
+        if (getLoaderManager().getLoader(LOADER_TALE) != null) {
+            getLoaderManager().initLoader(LOADER_TALE, null, ActivityTaleDetail.this);
+        } else {
+            getLoaderManager().restartLoader(LOADER_TALE, null, ActivityTaleDetail.this);
+        }
+    }
+
+    private void startTaleProgressLoader() {
+        if (getLoaderManager().getLoader(LOADER_TALE_PROGRESS) != null) {
+            getLoaderManager().initLoader(LOADER_TALE_PROGRESS, null, ActivityTaleDetail.this);
+        } else {
+            getLoaderManager().restartLoader(LOADER_TALE_PROGRESS, null, ActivityTaleDetail.this);
+        }
+    }
+
+    private void onTaleProgressLoaded() {
 
     }
 

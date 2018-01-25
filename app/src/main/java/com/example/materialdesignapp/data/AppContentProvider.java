@@ -84,7 +84,7 @@ public class AppContentProvider extends ContentProvider {
             case TALE_PROGRESS_WITH_ID:
                 long id = ContentUris.parseId(uri);
                 SQLiteDatabase readableDatabase = mOpenHelper.getReadableDatabase();
-                cursor = readableDatabase.query(Tables.TALE_PROGRESS, projection, TaleProgressContract.TaleProgressEntry._ID + "=?", new String[]{String.valueOf(id)}, null, null, null);
+                cursor = readableDatabase.query(Tables.TALE_PROGRESS, projection, TaleProgressContract.TaleProgressEntry.TALE_ID + "=?", new String[]{String.valueOf(id)}, null, null, null);
                 return cursor;
 
             default:
