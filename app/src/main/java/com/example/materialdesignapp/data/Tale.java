@@ -5,10 +5,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.format.DateUtils;
 import android.util.Log;
-import android.widget.TextView;
-
-import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.ui.ImageLoader;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -27,7 +23,7 @@ public class Tale implements Parcelable {
     private String mPhoto;
     private String mAuthor;
     private String mDate;
-    private String mTale;
+    private String mBody;
 
     public String getTitle() {
         return mTitle;
@@ -45,8 +41,8 @@ public class Tale implements Parcelable {
         return mDate;
     }
 
-    public String getTale() {
-        return mTale;
+    public String getBody() {
+        return mBody;
     }
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
@@ -57,7 +53,7 @@ public class Tale implements Parcelable {
         mPhoto = cursor.getString(ArticleLoader.Query.PHOTO_URL);
         mTitle = cursor.getString(ArticleLoader.Query.TITLE);
         mAuthor = cursor.getString(ArticleLoader.Query.AUTHOR);
-        mTale = cursor.getString(ArticleLoader.Query.BODY);
+        mBody = cursor.getString(ArticleLoader.Query.BODY);
 
         Date publishedDate = parsePublishedDate(cursor);
         if (!publishedDate.before(START_OF_EPOCH.getTime())) {
@@ -90,7 +86,7 @@ public class Tale implements Parcelable {
         mPhoto = in.readString();
         mAuthor = in.readString();
         mDate = in.readString();
-        mTale = in.readString();
+        mBody = in.readString();
         dateFormat = (SimpleDateFormat) in.readValue(SimpleDateFormat.class.getClassLoader());
         outputFormat = (SimpleDateFormat) in.readValue(SimpleDateFormat.class.getClassLoader());
         START_OF_EPOCH = (GregorianCalendar) in.readValue(GregorianCalendar.class.getClassLoader());
@@ -107,7 +103,7 @@ public class Tale implements Parcelable {
         dest.writeString(mPhoto);
         dest.writeString(mAuthor);
         dest.writeString(mDate);
-        dest.writeString(mTale);
+        dest.writeString(mBody);
         dest.writeValue(dateFormat);
         dest.writeValue(outputFormat);
         dest.writeValue(START_OF_EPOCH);

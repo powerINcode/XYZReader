@@ -53,11 +53,17 @@
             android:exported="false" />
 
         <provider
-            android:name="com.example.materialdesignapp.data.ItemsProvider"
+            android:name="com.example.materialdesignapp.data.AppContentProvider"
             android:authorities="com.example.materialdesignapp"
             android:exported="false" />
 
-        <activity android:name="com.example.materialdesignapp.ui.ActivityTaleDetail" />
+        <activity
+            android:name="com.example.materialdesignapp.ui.ActivityTaleDetail"
+            android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.materialdesignapp.ui.ArticleListActivity" />
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"

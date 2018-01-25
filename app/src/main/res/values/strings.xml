@@ -10,5 +10,6 @@
     <string name="up">Up</string>
     <string name="title_activity_tmp">tmp</string>
     <string name="tale_description">Written by %1$s in %2$s</string>
+    <string name="share_intent_title">Choose app for read this tale</string>
 
 </resources>

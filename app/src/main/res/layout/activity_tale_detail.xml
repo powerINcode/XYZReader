@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.materialdesignapp.ui.ActivityTaleDetail">
+    android:orientation="vertical"
+    tools:context="com.example.materialdesignapp.ui.ActivityTaleDetail"
+    android:animateLayoutChanges="true">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="?actionBarSize"/>
 
-    <TextView
-        android:id="@+id/tv_page"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="@dimen/tale_text_size"
-        android:visibility="invisible"
-        android:padding="@dimen/tale_body_padding"/>
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/tale_text_size"
+            android:visibility="invisible"
+            android:padding="@dimen/tale_body_padding"
+            android:paddingTop="?actionBarSize"/>
+    </FrameLayout>
+
+</LinearLayout>

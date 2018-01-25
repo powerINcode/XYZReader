@@ -1,9 +1,11 @@
 package com.example.materialdesignapp.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ShareCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,7 @@ public class FragmentTaleCover extends Fragment {
     private TextView mTaleDescriptionTextView;
     private TextView mDateTextView;
     private ImageLoader mImageLoader;
+    private FloatingActionButton mShareFloatingButton;
 
     public static FragmentTaleCover getFragment(Tale tale) {
         Bundle bundle = new Bundle();
@@ -34,10 +37,30 @@ public class FragmentTaleCover extends Fragment {
         return fragment;
     }
 
+    public String getTale() {
+        return ((ActivityTaleDetail) getActivity()).getTale().getBody();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tale_cover, container, false);
+
+        mShareFloatingButton = view.findViewById(R.id.fb_share);
+        mShareFloatingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent shareIntent = ShareCompat.IntentBuilder.from(getActivity())
+                        .setChooserTitle(R.string.share_intent_title)
+                        .setType("text/plain")
+                        .setText(getTale())
+                        .getIntent();
+
+                if (shareIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(shareIntent);
+                }
+            }
+        });
 
         if (getArguments() != null) {
             mTale = getArguments().getParcelable(BUNDLE_TALE);

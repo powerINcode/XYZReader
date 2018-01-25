@@ -62,12 +62,15 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_share"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="-28dp"
         android:src="@drawable/ic_share"
         android:layout_alignTop="@id/cl_tale_content"
+        android:focusable="true"
+        android:clickable="true"
         android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

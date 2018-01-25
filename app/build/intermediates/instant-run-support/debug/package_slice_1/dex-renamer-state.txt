@@ -1,4 +1,4 @@
-#Tue Jan 23 18:14:28 MSK 2018
-base.0=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/2
+#Thu Jan 25 15:28:27 MSK 2018
+base.0=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/21
 path.0=classes.dex
 renamed.0=classes.dex

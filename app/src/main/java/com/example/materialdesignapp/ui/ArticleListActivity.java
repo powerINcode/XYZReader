@@ -22,7 +22,6 @@ import android.widget.TextView;
 
 import com.example.materialdesignapp.R;
 import com.example.materialdesignapp.data.ArticleLoader;
-import com.example.materialdesignapp.data.Tale;
 import com.example.materialdesignapp.data.UpdaterService;
 
 import java.text.ParseException;
@@ -187,7 +186,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
                     Intent intent = new Intent(ArticleListActivity.this, ActivityTaleDetail.class);
                     if (mCursor.moveToPosition(vh.getAdapterPosition())) {
-                        intent.putExtra(ActivityTaleDetail.BUNDLE_TALE, new Tale(mCursor));
+                        intent.putExtra(ActivityTaleDetail.EXTRA_TALE_ID, mCursor.getLong(ArticleLoader.Query._ID));
                         startActivity(intent);
                     }
 

@@ -25,7 +25,7 @@ public class TalePager {
 
     private ArrayList<CharSequence> mPages = new ArrayList<>();
 
-    public TalePager(TextView textView, String text, float textSize) {
+    public TalePager(TextView textView, String text, float actionBarHeight) {
         mTextView = textView;
         mHeight = textView.getHeight();
         mWidth = textView.getWidth();
@@ -36,7 +36,7 @@ public class TalePager {
 
         mPadding = new Rect(mTextView.getPaddingStart(), mTextView.getPaddingTop(),
                 mTextView.getPaddingEnd(), mTextView.getPaddingBottom());
-        mHeight -= mPadding.top + mPadding.bottom;
+        mHeight -= mPadding.top + mPadding.bottom + actionBarHeight;
         mWidth -= mPadding.left + mPadding.right;
     }
 

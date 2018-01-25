@@ -1,31 +1,31 @@
 #Internal package file, do not edit.
-#Wed Jan 24 12:04:50 MSK 2018
-2.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/15
+#Thu Jan 25 15:28:28 MSK 2018
+2.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/34
 5.set=DEX
 0.path=classes.dex
 2.baseType=DIRECTORY
-3.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/13
+3.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/assets/debug
 2.set=DEX
-1.path=Rosario-Regular.ttf
-4.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/16
+1.path=classes.dex
+4.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/32
 count=7
 5.baseType=DIRECTORY
 2.path=classes.dex
-5.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/14
+5.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/35
 4.set=DEX
-3.path=classes.dex
-6.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/17
+3.path=Rosario-Regular.ttf
+6.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/36
 3.baseType=DIRECTORY
-1.set=ASSET
+1.set=DEX
 4.path=classes.dex
 6.set=DEX
 1.baseType=DIRECTORY
 6.baseType=DIRECTORY
 5.path=classes.dex
-0.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/12
+0.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/33
 0.baseType=DIRECTORY
-3.set=DEX
+3.set=ASSET
 6.path=classes.dex
-1.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/assets/debug
+1.base=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/31
 4.baseType=DIRECTORY
 0.set=DEX
