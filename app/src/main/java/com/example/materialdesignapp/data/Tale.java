@@ -66,8 +66,6 @@ public class Tale implements Parcelable {
             mDate = outputFormat.format(publishedDate);
 
         }
-
-        Log.d("haha", "Parse finish");
     }
 
     private Date parsePublishedDate(Cursor cursor) {

@@ -31,4 +31,5 @@ dependencies {
     compile 'com.android.support:design:26.1.0'
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'org.jetbrains:annotations-java5:15.0'
 }

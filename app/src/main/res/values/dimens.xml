@@ -11,4 +11,7 @@
     <dimen name="tale_body_padding">16dp</dimen>
     <dimen name="tale_text_size">24sp</dimen>
 
+    <!--list_item_article-->
+    <dimen name="list_item_article_margins">8dp</dimen>
+
 </resources>

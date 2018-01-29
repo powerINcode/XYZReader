@@ -111,7 +111,7 @@ public class AppContentProvider extends ContentProvider {
 
                     return ContentUris.withAppendedId(TaleProgressContract.TaleProgressEntry.CONTENT_URI, id);
                 } else {
-                    throw new android.database.sqlite.SQLiteException("Failed to insert tale progress: " + uri);
+                    throw new android.database.sqlite.SQLiteException("Failed to create tale progress: " + uri);
                 }
             default: {
                 throw new UnsupportedOperationException("Unknown uri: " + uri);

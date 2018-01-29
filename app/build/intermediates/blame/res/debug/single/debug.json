@@ -48,12 +48,12 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -144,12 +144,12 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/layout_abc_action_bar_up_container.xml.flat",
@@ -228,12 +228,12 @@
         "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/drawable-xxhdpi/ic_share.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/layout_activity_tale_detail.xml.flat",
@@ -256,12 +256,12 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_track_material.xml.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable/abc_seekbar_track_material.xml"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_track_material.xml.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable/abc_seekbar_track_material.xml"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -376,12 +376,12 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/661c577f826ffbbe3bc42bf9f45c65c6/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5082c5ff6d5ef2c9ee5b7cda16f3caf5/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/layout_design_navigation_item_separator.xml.flat",
@@ -436,12 +436,12 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/res/layout-v21/notification_action_tombstone.xml"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_thumb_material.xml.flat",
@@ -516,16 +516,16 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5082c5ff6d5ef2c9ee5b7cda16f3caf5/res/drawable-v21/design_password_eye.xml"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable_abc_ic_ab_back_material.xml.flat",
@@ -568,16 +568,16 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/anim_abc_shrink_fade_out_from_bottom.xml.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -680,12 +680,12 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable_logo_gradient.xml.flat",
         "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/drawable/logo_gradient.xml"
+    },
+    {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1024,6 +1024,10 @@
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/animator-v21_fab_state_list_anim.xml.flat",
+        "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/animator-v21/fab_state_list_anim.xml"
+    },
+    {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
@@ -1126,10 +1130,6 @@
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
-    },
-    {
-        "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/anim-v21_fab_state_list_anim.xml.flat",
-        "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/anim-v21/fab_state_list_anim.xml"
     },
     {
         "merged": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",

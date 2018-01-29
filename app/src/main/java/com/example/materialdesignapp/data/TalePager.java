@@ -23,7 +23,7 @@ public class TalePager {
     private int mWidth;
     private String mText;
 
-    private ArrayList<CharSequence> mPages = new ArrayList<>();
+    private ArrayList<PageInfo> mPages = new ArrayList<>();
 
     public TalePager(TextView textView, String text, float actionBarHeight) {
         mTextView = textView;
@@ -40,7 +40,7 @@ public class TalePager {
         mWidth -= mPadding.left + mPadding.right;
     }
 
-    public CharSequence getPage(int page) {
+    public PageInfo getPage(int page) {
         return mPages.get(page);
     }
 
@@ -60,14 +60,16 @@ public class TalePager {
         for (int i = 0; i < lines; i++) {
             if (height < layout.getLineBottom(i)) {
                 // When the layout height has been exceeded
-                mPages.add(text.subSequence(startOffset, layout.getLineStart(i)));
+                PageInfo pageInfo = new PageInfo(startOffset, layout.getLineStart(i), text.subSequence(startOffset, layout.getLineStart(i)));
+                mPages.add(pageInfo);
                 startOffset = layout.getLineStart(i);
                 height = layout.getLineTop(i) + mHeight;
             }
 
             if (i == lines - 1) {
                 // Put the rest of the text into the last page
-                mPages.add(text.subSequence(startOffset, layout.getLineEnd(i)));
+                PageInfo pageInfo = new PageInfo(startOffset, layout.getLineStart(i), text.subSequence(startOffset, layout.getLineStart(i)));
+                mPages.add(pageInfo);
                 break;
             }
         }

@@ -51,6 +51,7 @@
             android:authorities="com.example.materialdesignapp"
             android:exported="false" />
 
+
         <activity android:name=".ui.ActivityTaleDetail"
             android:parentActivityName=".ui.ArticleListActivity">
             <meta-data

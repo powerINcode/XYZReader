@@ -1,5 +1,6 @@
 package com.example.materialdesignapp.ui;
 
+import android.annotation.SuppressLint;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,26 +9,23 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.format.DateUtils;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.materialdesignapp.R;
 import com.example.materialdesignapp.data.ArticleLoader;
+import com.example.materialdesignapp.data.Tale;
 import com.example.materialdesignapp.data.UpdaterService;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import com.example.materialdesignapp.utils.ViewUtil;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for
@@ -42,16 +40,13 @@ public class ArticleListActivity extends AppCompatActivity implements
     private static final String BUNDLE_SCROLL_POSITION = "BUNDLE_SCROLL_POSITION";
 
 
-    private Toolbar mToolbar;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
     private int mScrollPosition = 0;
-
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
-    // Use default locale format
-    private SimpleDateFormat outputFormat = new SimpleDateFormat();
-    // Most time functions can only handle 1902 - 2037
-    private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
+    private boolean mIsRefreshing = false;
+    private boolean mIsAnimationShown = false;
+    private AppBarLayout mAppBarLayout;
+    private CoordinatorLayout mCoordinatorLayout;
 
     @Override
     protected void onResume() {
@@ -63,18 +58,19 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        mCoordinatorLayout = findViewById(R.id.coordinator);
+        mAppBarLayout = findViewById(R.id.appbar);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setVisibility(View.INVISIBLE);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
 
-                mScrollPosition += dy;
+//                mScrollPosition += dy;
             }
         });
         getLoaderManager().initLoader(0, null, this);
@@ -105,12 +101,18 @@ public class ArticleListActivity extends AppCompatActivity implements
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
+
         if (mRecyclerView != null) {
-            outState.putInt(BUNDLE_SCROLL_POSITION, mRecyclerView.computeVerticalScrollOffset());
+            GridLayoutManager lm = (GridLayoutManager) mRecyclerView.getLayoutManager();
+
+            if (lm == null) {
+                return;
+            }
+
+            int itemPosition = lm.findFirstCompletelyVisibleItemPosition();
+            outState.putInt(BUNDLE_SCROLL_POSITION, itemPosition);
         }
     }
-
-    private boolean mIsRefreshing = false;
 
     private BroadcastReceiver mRefreshingReceiver = new BroadcastReceiver() {
         @Override
@@ -136,16 +138,38 @@ public class ArticleListActivity extends AppCompatActivity implements
         Adapter adapter = new Adapter(this, cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
-        int columnCount = getResources().getInteger(R.integer.list_column_count);
-        LinearLayoutManager llm =
-                new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mRecyclerView.setLayoutManager(llm);
-
+        GridLayoutManager glm =
+                new GridLayoutManager(this, getResources().getInteger(R.integer.article_list_column_count));
+        mRecyclerView.setLayoutManager(glm);
 
         if (cursor == null || cursor.getCount() == 0) {
             refresh();
         } else {
-            mRecyclerView.setVerticalScrollbarPosition(mScrollPosition);
+            if (!mIsAnimationShown) {
+                mIsAnimationShown = true;
+                ViewUtil.onLoad(mRecyclerView, new Runnable() {
+                    @Override
+                    public void run() {
+                        mRecyclerView.setVisibility(View.VISIBLE);
+                        mRecyclerView.scrollToPosition(mScrollPosition);
+                        DisplayMetrics metrics = new DisplayMetrics();
+                        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                        int offset = metrics.heightPixels / 2;
+                        for (int i = 0, cnt = 0; i < mRecyclerView.getChildCount(); i++, cnt++) {
+                            View view = mRecyclerView.getChildAt(i);
+                            view.setTranslationY(offset + cnt * 100);
+                            view.setAlpha(0);
+
+                            view.animate()
+                                    .translationY(0)
+                                    .alpha(1)
+                                    .setDuration(850)
+                                    .setInterpolator(ViewUtil.getAccelerateInterpolator(ArticleListActivity.this))
+                                    .start();
+                        }
+                    }
+                });
+            }
         }
     }
 
@@ -181,9 +205,6 @@ public class ArticleListActivity extends AppCompatActivity implements
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    startActivity(new Intent(Intent.ACTION_VIEW,
-//                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
-
                     Intent intent = new Intent(ArticleListActivity.this, ActivityTaleDetail.class);
                     if (mCursor.moveToPosition(vh.getAdapterPosition())) {
                         intent.putExtra(ActivityTaleDetail.EXTRA_TALE_ID, mCursor.getLong(ArticleLoader.Query._ID));
@@ -195,39 +216,14 @@ public class ArticleListActivity extends AppCompatActivity implements
             return vh;
         }
 
-        private Date parsePublishedDate() {
-            try {
-                String date = mCursor.getString(ArticleLoader.Query.PUBLISHED_DATE);
-                return dateFormat.parse(date);
-            } catch (ParseException ex) {
-                Log.e(TAG, ex.getMessage());
-                Log.i(TAG, "passing today's date");
-                return new Date();
-            }
-        }
-
+        @SuppressLint("SetTextI18n")
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
-            holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
-            Date publishedDate = parsePublishedDate();
-            if (!publishedDate.before(START_OF_EPOCH.getTime())) {
-
-                holder.subtitleView.setText(Html.fromHtml(
-                        DateUtils.getRelativeTimeSpanString(
-                                publishedDate.getTime(),
-                                System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
-                                DateUtils.FORMAT_ABBREV_ALL).toString()
-                                + "<br/>" + " by "
-                                + mCursor.getString(ArticleLoader.Query.AUTHOR)));
-            } else {
-                holder.subtitleView.setText(Html.fromHtml(
-                        outputFormat.format(publishedDate)
-                        + "<br/>" + " by "
-                        + mCursor.getString(ArticleLoader.Query.AUTHOR)));
-            }
-
-            holder.thumbnailView.initialize(mCursor.getString(ArticleLoader.Query.THUMB_URL));
+            Tale tale = new Tale(mCursor);
+            holder.titleView.setText(tale.getTitle());
+            holder.subtitleView.setText(tale.getDate() + " " + getString(R.string.by) + " " + tale.getAuthor());
+            holder.thumbnailView.initialize(tale.getPhoto());
         }
 
         @Override

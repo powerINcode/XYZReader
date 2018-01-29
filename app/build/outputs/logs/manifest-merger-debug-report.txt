@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
 MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:design:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5082c5ff6d5ef2c9ee5b7cda16f3caf5/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/133a63fec890166246e081fdf43be236/AndroidManifest.xml:17:1-31:12
@@ -22,9 +22,9 @@ MERGED from [com.android.support:support-core-ui:26.1.0] /Users/powerman23rus/.g
 MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/176363b92dcfe7ad14ccf2bc31dd919e/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-compat:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c009bb51674daa8399467712ecb18553/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/368500cee704be6dc88fdfacafe5174c/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml
@@ -56,7 +56,7 @@ ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidMa
 	android:name
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:10:22-76
 application
-ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:12:5-60:19
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:12:5-61:19
 MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v13:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/support-v13-26.1.0.aar/5392d9512f322b39122ff0b65ce8658c/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5082c5ff6d5ef2c9ee5b7cda16f3caf5/AndroidManifest.xml:25:5-29:19
@@ -164,11 +164,11 @@ ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidMa
 	android:name
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:50:13-52
 activity#com.example.materialdesignapp.ui.ActivityTaleDetail
-ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:54:9-59:20
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:55:9-60:20
 	android:parentActivityName
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:55:13-65
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:56:13-65
 	android:name
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:54:19-56
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:55:19-56
 uses-sdk
 INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml

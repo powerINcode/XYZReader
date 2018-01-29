@@ -4,6 +4,23 @@
             "outputFile": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
+                    "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/values-land/integers.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "984",
+                        "endColumns": "57",
+                        "endOffsets": "1037"
+                    }
+                },
+                {
                     "source": "/Users/powerman23rus/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/5082c5ff6d5ef2c9ee5b7cda16f3caf5/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
@@ -14,12 +31,12 @@
                         "endOffsets": "232"
                     },
                     "to": {
-                        "startLines": "8",
+                        "startLines": "19",
                         "startColumns": "4",
-                        "startOffsets": "438",
-                        "endLines": "11",
+                        "startOffsets": "1042",
+                        "endLines": "22",
                         "endColumns": "12",
-                        "endOffsets": "615"
+                        "endOffsets": "1219"
                     }
                 },
                 {
@@ -32,11 +49,11 @@
                         "endOffsets": "141,83"
                     },
                     "to": {
-                        "startLines": "6,7",
+                        "startLines": "8,9",
                         "startColumns": "4,4",
-                        "startOffsets": "328,386",
+                        "startOffsets": "433,491",
                         "endColumns": "57,51",
-                        "endOffsets": "381,433"
+                        "endOffsets": "486,538"
                     }
                 },
                 {
@@ -47,6 +64,23 @@
                         "startOffsets": "55,125,189,260",
                         "endColumns": "69,63,70,67",
                         "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "/Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/res/values-land/dimens.xml",
+                    "from": {
+                        "startLines": "3,9,2,6,8,7,14,10,11,4",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "90,380,36,240,338,284,557,432,481,143",
+                        "endColumns": "52,51,53,43,41,53,55,48,45,95",
+                        "endOffsets": "138,427,85,279,375,333,608,476,522,234"
+                    },
+                    "to": {
+                        "startLines": "6,7,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "328,381,543,597,641,683,737,793,842,888",
+                        "endColumns": "52,51,53,43,41,53,55,48,45,95",
+                        "endOffsets": "376,428,592,636,678,732,788,837,883,979"
                     }
                 }
             ]
