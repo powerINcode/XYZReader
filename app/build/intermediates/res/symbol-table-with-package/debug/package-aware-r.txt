@@ -1,4 +1,4 @@
-com.example.powerincode.materialdesignapp
+com.example.powerincode.xyzreader
 int anim abc_fade_in 0x7f010000
 int anim abc_fade_out 0x7f010001
 int anim abc_grow_fade_in_from_bottom 0x7f010002
@@ -1163,11 +1163,12 @@ int string path_password_strike_through 0x7f0e002c
 int string search_menu_title 0x7f0e002d
 int string share_error 0x7f0e002e
 int string share_intent_title 0x7f0e002f
-int string status_bar_notification_info_overflow 0x7f0e0030
-int string tale_description 0x7f0e0031
-int string title_activity_tmp 0x7f0e0032
-int string up 0x7f0e0033
-int string welcome_xyz_reader 0x7f0e0034
+int string share_title 0x7f0e0030
+int string status_bar_notification_info_overflow 0x7f0e0031
+int string tale_description 0x7f0e0032
+int string title_activity_tmp 0x7f0e0033
+int string up 0x7f0e0034
+int string welcome_xyz_reader 0x7f0e0035
 int style AlertDialog_AppCompat 0x7f0f0000
 int style AlertDialog_AppCompat_Light 0x7f0f0001
 int style Animation_AppCompat_Dialog 0x7f0f0002

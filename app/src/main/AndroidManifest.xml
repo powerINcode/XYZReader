@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.materialdesignapp"
+    package="com.example.xyzreader"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.ArticleListActivity"
+            android:name="com.example.xyzreader.ui.ArticleListActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,24 +24,24 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.ActivityTaleDetail"
-            android:parentActivityName=".ui.ArticleListActivity">
+        <activity android:name="com.example.xyzreader.ui.ActivityTaleDetail"
+            android:parentActivityName="com.example.xyzreader.ui.ArticleListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.materialdesignapp.ui.ArticleListActivity" />
+                android:value="com.example.xyzreader.ui.ArticleListActivity" />
         </activity>
 
         <service
-            android:name=".data.UpdaterService"
+            android:name="com.example.xyzreader.data.UpdaterService"
             android:exported="false" />
 
         <provider
-            android:name=".data.AppContentProvider"
-            android:authorities="com.example.materialdesignapp"
+            android:name="com.example.xyzreader.data.AppContentProvider"
+            android:authorities="com.example.xyzreader"
             android:exported="false" />
 
         <provider
-            android:authorities="com.example.materialdesignapp.fileprovider"
+            android:authorities="com.example.xyzreader.fileprovider"
             android:name="android.support.v4.content.FileProvider"
             android:grantUriPermissions="true"
             android:exported="false">

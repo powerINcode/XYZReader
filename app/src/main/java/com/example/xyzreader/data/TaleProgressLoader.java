@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.content.Context;
 import android.net.Uri;
@@ -20,7 +20,7 @@ public class TaleProgressLoader extends CursorLoader {
         String[] PROJECTION = {
                 TaleProgressContract.TaleProgressEntry._ID,
                 TaleProgressContract.TaleProgressEntry.TALE_ID,
-                TaleProgressContract.TaleProgressEntry.PAGE
+                TaleProgressContract.TaleProgressEntry.PAUSE_INDEX
         };
     }
 }

@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.powerincode.materialdesignapp", appContext.getPackageName());
+        assertEquals("com.example.powerincode.xyzreader", appContext.getPackageName());
     }
 }

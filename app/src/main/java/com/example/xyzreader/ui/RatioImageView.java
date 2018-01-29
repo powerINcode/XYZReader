@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.ui;
+package com.example.xyzreader.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.example.materialdesignapp.R;
+import com.example.xyzreader.R;
 
 /**
  * Created by powerman23rus on 27.01.2018.

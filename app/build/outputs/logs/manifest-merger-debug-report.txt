@@ -26,7 +26,7 @@ INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/Androi
 INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-54:12
 INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:3:5-44
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -101,12 +101,12 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/powerman23rus/.gradle/
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:16:9-40
-activity#com.example.materialdesignapp.ui.ArticleListActivity
+activity#com.example.xyzreader.ui.ArticleListActivity
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:17:9-25:20
 	android:label
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:19:13-45
 	android:name
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:18:13-51
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:18:13-72
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
@@ -117,38 +117,38 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:23:27-74
-activity#com.example.materialdesignapp.ui.ActivityTaleDetail
+activity#com.example.xyzreader.ui.ActivityTaleDetail
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:27:9-32:20
 	android:parentActivityName
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:28:13-65
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:28:13-86
 	android:name
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:27:19-56
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:27:19-77
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:29:13-31:88
+ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:29:13-31:80
 	android:value
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:31:17-85
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:30:17-63
-service#com.example.materialdesignapp.data.UpdaterService
+service#com.example.xyzreader.data.UpdaterService
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:35:13-48
-provider#com.example.materialdesignapp.data.AppContentProvider
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:35:13-69
+provider#com.example.xyzreader.data.AppContentProvider
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:38:9-41:40
 	android:authorities
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:40:13-64
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:40:13-56
 	android:exported
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:39:13-52
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:39:13-73
 provider#android.support.v4.content.FileProvider
 ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:43:9-51:20
 	android:grantUriPermissions
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:46:13-47
 	android:authorities
-		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:44:13-77
+		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:44:13-69
 	android:exported
 		ADDED from /Users/powerman23rus/Desktop/MaterialDesignApp/app/src/main/AndroidManifest.xml:47:13-37
 	android:name

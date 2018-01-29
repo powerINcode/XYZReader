@@ -5,36 +5,33 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="METHOD_DELETED"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1517223456718"
+    timestamp="1517242543949"
     token="-5768249036173027328"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1274" />
+        duration="1294" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="376" />
+        duration="358" />
     <task
         name="verifier"
-        duration="46" />
+        duration="58" />
 
     <artifact
-        location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1517223096086"
+        timestamp="1517242462991"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
@@ -68,14 +65,17 @@
         <artifact
             location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_DELETED"
-        timestamp="1517223456718"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1517242543949"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
     </build>
 

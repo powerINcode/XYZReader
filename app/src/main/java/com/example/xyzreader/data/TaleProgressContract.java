@@ -1,6 +1,5 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
-import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -26,10 +25,10 @@ public class TaleProgressContract {
 
         public final static int COLUMN_ID_INDEX = 0;
         public final static int COLUMN_TALE_ID_INDEX = 1;
-        public final static int COLUMN_START_INDEX = 2;
+        public final static int COLUMN_PAUSE_INDEX = 2;
 
         public final static String TALE_ID = "tale_id";
-        public final static String PAGE = "page";
+        public final static String PAUSE_INDEX = "pause_index";
 
         public static long create(ContentResolver contentResolver, long taleId) {
             ContentValues cv = new ContentValues();
@@ -41,7 +40,7 @@ public class TaleProgressContract {
 
         public static boolean updatePage(ContentResolver cr, long taleId, int page) {
             ContentValues cv = new ContentValues();
-            cv.put(TaleProgressEntry.PAGE, page);
+            cv.put(TaleProgressEntry.PAUSE_INDEX, page);
 
             int count = cr.update(buildTaleProgressUri(taleId), cv, null, null);
             return count > 0;

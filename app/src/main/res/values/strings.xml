@@ -13,7 +13,7 @@
     <string name="share_intent_title">Choose app for read this tale</string>
     <string name="by">by</string>
     <string name="share_error">Ops! Can\'t share the tail</string>
-
+    <string name="share_title">Share file with</string>
 
 
 </resources>

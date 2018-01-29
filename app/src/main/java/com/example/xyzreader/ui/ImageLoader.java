@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.ui;
+package com.example.xyzreader.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.example.materialdesignapp.R;
+import com.example.xyzreader.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 

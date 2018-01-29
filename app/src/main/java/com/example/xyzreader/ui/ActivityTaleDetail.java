@@ -1,14 +1,11 @@
-package com.example.materialdesignapp.ui;
+package com.example.xyzreader.ui;
 
 import android.annotation.SuppressLint;
-import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.app.NavUtils;
@@ -21,14 +18,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.data.ArticleLoader;
-import com.example.materialdesignapp.data.Tale;
-import com.example.materialdesignapp.data.TalePager;
-import com.example.materialdesignapp.data.TaleProgress;
-import com.example.materialdesignapp.data.TaleProgressContract.TaleProgressEntry;
-import com.example.materialdesignapp.data.TaleProgressLoader;
-import com.example.materialdesignapp.utils.ViewUtil;
+import com.example.xyzreader.R;
+import com.example.xyzreader.data.ArticleLoader;
+import com.example.xyzreader.data.Tale;
+import com.example.xyzreader.data.TalePager;
+import com.example.xyzreader.data.TaleProgress;
+import com.example.xyzreader.data.TaleProgressContract.TaleProgressEntry;
+import com.example.xyzreader.data.TaleProgressLoader;
+import com.example.xyzreader.utils.ViewUtil;
 
 public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.OnPageChangeListener,
         LoaderManager.LoaderCallbacks<Cursor>{
@@ -153,8 +150,8 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
 
     private void updatePageStartIndex(int pageStartIndex) {
         if (mIsTaleRewind) {
-            mTaleProgress.setStartIndex(pageStartIndex);
-            TaleProgressEntry.updatePage(getContentResolver(), mTaleId, mTaleProgress.getStartIndex());
+            mTaleProgress.setPauseIndex(pageStartIndex);
+            TaleProgressEntry.updatePage(getContentResolver(), mTaleId, mTaleProgress.getPauseIndex());
         }
     }
     //endregion
@@ -222,14 +219,14 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
     }
 
     private void onTaleProgressLoaded() {
-        if (mTaleProgress.getStartIndex() == TALE_START_INDEX) {
+        if (mTaleProgress.getPauseIndex() == TALE_START_INDEX) {
             mViewPager.setCurrentItem(0, false);
         } else {
             int page = 0;
             for (int i = 0; i < mTalePager.getPageCount(); i++) {
                 int startIndex = mTalePager.getPage(i).getStartIndex();
                 int endIndexIndex = mTalePager.getPage(i).getEndIndex();
-                if (mTaleProgress.getStartIndex() >= startIndex  && mTaleProgress.getStartIndex() <= endIndexIndex) {
+                if (mTaleProgress.getPauseIndex() >= startIndex  && mTaleProgress.getPauseIndex() <= endIndexIndex) {
                     page = i;
                     break;
                 }
@@ -266,6 +263,10 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
             @Override
             protected void onPostExecute(Void aVoid) {
                 mAdapter.notifyDataSetChanged();
+
+                if (mTaleCoverFragment != null) {
+                    mTaleCoverFragment.setTale(mTale);
+                }
 
                 if (mTaleProgress == null) {
                     startTaleProgressLoader();

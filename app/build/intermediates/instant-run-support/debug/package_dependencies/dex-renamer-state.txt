@@ -1,4 +1,4 @@
-#Mon Jan 29 09:15:10 MSK 2018
+#Mon Jan 29 18:42:30 MSK 2018
 base.0=/Users/powerman23rus/Desktop/MaterialDesignApp/app/build/intermediates/transforms/dexMerger/debug/49
 path.0=classes.dex
 renamed.0=classes.dex

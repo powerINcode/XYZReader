@@ -1,6 +1,4 @@
-package com.example.materialdesignapp.data;
-
-import android.net.Uri;
+package com.example.xyzreader.data;
 
 /**
  * Created by powerman23rus on 29.01.2018.

@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.ui;
+package com.example.xyzreader.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,10 +13,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.data.FileContract;
-import com.example.materialdesignapp.data.Tale;
-import com.example.materialdesignapp.utils.ViewUtil;
+import com.example.xyzreader.R;
+import com.example.xyzreader.data.FileContract;
+import com.example.xyzreader.data.Tale;
+import com.example.xyzreader.utils.ViewUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -40,15 +40,20 @@ public class FragmentTaleCover extends Fragment {
 
     public static FragmentTaleCover getFragment(Tale tale) {
         Bundle bundle = new Bundle();
-        bundle.putParcelable(BUNDLE_TALE, tale);
+        Tale taleCopy = new Tale(tale.getTitle(), tale.getPhoto(), tale.getAuthor(), tale.getDate(), null);
+        bundle.putParcelable(BUNDLE_TALE, taleCopy);
         FragmentTaleCover fragment = new FragmentTaleCover();
         fragment.setArguments(bundle);
 
         return fragment;
     }
 
-    public String getTale() {
-        return ((ActivityTaleDetail) getActivity()).getTale().getBody();
+    public void setTale(Tale tale) {
+        mTale = tale;
+
+        if (isAdded()) {
+            updateView();
+        }
     }
 
     @Nullable
@@ -58,6 +63,11 @@ public class FragmentTaleCover extends Fragment {
 
         mDescriptionContainer = view.findViewById(R.id.cl_tale_content);
         mShareFloatingButton = view.findViewById(R.id.fb_share);
+        mImageLoader = view.findViewById(R.id.iv_photo);
+        mTitleTextView = view.findViewById(R.id.tv_title);
+        mTaleDescriptionTextView = view.findViewById(R.id.tv_tale_description);
+        mDateTextView = view.findViewById(R.id.tv_date);
+
 
         mShareFloatingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +80,6 @@ public class FragmentTaleCover extends Fragment {
                     Intent sharingIntent = new Intent(Intent.ACTION_VIEW);
                     sharingIntent.setDataAndType(taleUri, getContext().getContentResolver().getType(taleUri));
                     sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    startActivity(Intent.createChooser(sharingIntent, "share file with"));
 
                     if (sharingIntent.resolveActivity(getActivity().getPackageManager()) != null) {
                         startActivity(sharingIntent);
@@ -84,19 +93,19 @@ public class FragmentTaleCover extends Fragment {
 
         if (getArguments() != null) {
             mTale = getArguments().getParcelable(BUNDLE_TALE);
-            mImageLoader = view.findViewById(R.id.iv_photo);
-            mTitleTextView = view.findViewById(R.id.tv_title);
-            mTaleDescriptionTextView = view.findViewById(R.id.tv_tale_description);
-            mDateTextView = view.findViewById(R.id.tv_date);
-
-            mTitleTextView.setText(mTale.getTitle());
-            mTaleDescriptionTextView.setText(getResources().getString(R.string.tale_description, mTale.getAuthor(), mTale.getDate()));
-
-
-            mImageLoader.initialize(mTale.getPhoto());
+            updateView();
         }
 
         return view;
+    }
+
+    public void updateView() {
+        if (mTale != null) {
+            mTitleTextView.setText(mTale.getTitle());
+            mTaleDescriptionTextView.setText(getResources().getString(R.string.tale_description, mTale.getAuthor(), mTale.getDate()));
+
+            mImageLoader.initialize(mTale.getPhoto());
+        }
     }
 
     private File generateTaleFile(String taleName) throws IOException {
@@ -109,6 +118,7 @@ public class FragmentTaleCover extends Fragment {
         File tale = new File(cacheTalesDir.getAbsolutePath() + "/" + taleName + ".txt");
         if (!tale.exists()) {
             tale.createNewFile();
+            tale.deleteOnExit();
 
             FileOutputStream fOut = new FileOutputStream(tale);
             OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);

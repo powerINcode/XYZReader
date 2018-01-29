@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.net.Uri;
 

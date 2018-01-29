@@ -1,10 +1,10 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.example.materialdesignapp.data.TaleProgressContract.TaleProgressEntry;
+import com.example.xyzreader.data.TaleProgressContract.TaleProgressEntry;
 
 /**
  * Created by powerman23rus on 25.01.2018.
@@ -15,7 +15,7 @@ public class TaleProgress implements Parcelable {
 
     private long mId;
     private long mTaleId;
-    private int mStartIndex;
+    private int mPauseIndex;
 
     public long getId() {
         return mId;
@@ -25,8 +25,8 @@ public class TaleProgress implements Parcelable {
         return mTaleId;
     }
 
-    public int getStartIndex() {
-        return mStartIndex;
+    public int getPauseIndex() {
+        return mPauseIndex;
     }
 
     public void setId(long id) {
@@ -37,26 +37,26 @@ public class TaleProgress implements Parcelable {
         mTaleId = taleId;
     }
 
-    public void setStartIndex(int startIndex) {
-        mStartIndex = startIndex;
+    public void setPauseIndex(int pauseIndex) {
+        mPauseIndex = pauseIndex;
     }
 
     public TaleProgress(Cursor cursor) {
         mId = cursor.getLong(TaleProgressEntry.COLUMN_ID_INDEX);
         mTaleId = cursor.getLong(TaleProgressEntry.COLUMN_TALE_ID_INDEX);
-        mStartIndex = cursor.getInt(TaleProgressEntry.COLUMN_START_INDEX);
+        mPauseIndex = cursor.getInt(TaleProgressEntry.COLUMN_PAUSE_INDEX);
     }
 
     public TaleProgress(long id, long taleId, int page) {
         mId = id;
         mTaleId = taleId;
-        mStartIndex = page;
+        mPauseIndex = page;
     }
 
     protected TaleProgress(Parcel in) {
         mId = in.readLong();
         mTaleId = in.readLong();
-        mStartIndex = in.readInt();
+        mPauseIndex = in.readInt();
     }
 
     @Override
@@ -68,7 +68,7 @@ public class TaleProgress implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeLong(mId);
         dest.writeLong(mTaleId);
-        dest.writeInt(mStartIndex);
+        dest.writeInt(mPauseIndex);
     }
 
     @SuppressWarnings("unused")

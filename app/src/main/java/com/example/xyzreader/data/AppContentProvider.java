@@ -1,5 +1,5 @@
 
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.content.ContentProvider;
 import android.content.ContentProviderOperation;
@@ -19,7 +19,7 @@ import java.util.List;
 public class AppContentProvider extends ContentProvider {
     private SQLiteOpenHelper mOpenHelper;
 
-    public static final String AUTHORITY = "com.example.materialdesignapp";
+    public static final String AUTHORITY = "com.example.xyzreader";
     public static final Uri BASE_URI = Uri.parse("content://" + AppContentProvider.AUTHORITY);
 
     interface Tables {

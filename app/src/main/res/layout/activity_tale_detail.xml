@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.materialdesignapp.ui.ActivityTaleDetail"
+    tools:context="com.example.xyzreader.ui.ActivityTaleDetail"
     android:animateLayoutChanges="true">
 
     <android.support.v7.widget.Toolbar

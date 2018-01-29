@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.database.Cursor;
 import android.os.Parcel;
@@ -66,6 +66,14 @@ public class Tale implements Parcelable {
             mDate = outputFormat.format(publishedDate);
 
         }
+    }
+
+    public Tale(String title, String photo, String author, String date, String body) {
+        mTitle = title;
+        mPhoto = photo;
+        mAuthor = author;
+        mDate = date;
+        mBody = body;
     }
 
     private Date parsePublishedDate(Cursor cursor) {

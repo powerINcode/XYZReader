@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.ui;
+package com.example.xyzreader.ui;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
@@ -11,7 +11,6 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -21,11 +20,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.data.ArticleLoader;
-import com.example.materialdesignapp.data.Tale;
-import com.example.materialdesignapp.data.UpdaterService;
-import com.example.materialdesignapp.utils.ViewUtil;
+import com.example.xyzreader.R;
+import com.example.xyzreader.data.ArticleLoader;
+import com.example.xyzreader.data.Tale;
+import com.example.xyzreader.data.UpdaterService;
+import com.example.xyzreader.utils.ViewUtil;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for

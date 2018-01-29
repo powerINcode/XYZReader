@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.content.Context;
 import android.database.Cursor;

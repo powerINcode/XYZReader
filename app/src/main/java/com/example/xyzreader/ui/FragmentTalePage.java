@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.ui;
+package com.example.xyzreader.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,12 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.TextView;
 
-import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.data.PageInfo;
-import com.example.materialdesignapp.data.TalePager;
+import com.example.xyzreader.R;
+import com.example.xyzreader.data.PageInfo;
+import com.example.xyzreader.data.TalePager;
 
 /**
  * Created by powerman23rus on 23.01.2018.

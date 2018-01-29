@@ -1,16 +1,16 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.materialdesignapp.data.TaleProgressContract.TaleProgressEntry;
+import com.example.xyzreader.data.TaleProgressContract.TaleProgressEntry;
 
-import static com.example.materialdesignapp.data.AppContentProvider.Tables;
+import static com.example.xyzreader.data.AppContentProvider.Tables;
 
 public class AppDb extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "xyzreader.db";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
 
     public AppDb(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -33,7 +33,7 @@ public class AppDb extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + Tables.TALE_PROGRESS + " ("
                 + TaleProgressEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + TaleProgressEntry.TALE_ID + " INTEGER NOT NULL UNIQUE,"
-                + TaleProgressEntry.PAGE + " INTEGER NOT NULL DEFAULT 0"
+                + TaleProgressEntry.PAUSE_INDEX + " INTEGER NOT NULL DEFAULT 0"
                 + ")" );
 
     }

@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,11 +1,10 @@
-package com.example.materialdesignapp.data;
+package com.example.xyzreader.data;
 
 import android.graphics.Rect;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.Layout;
 import android.text.StaticLayout;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,6 +21,7 @@ public class TalePager {
     private int mHeight;
     private int mWidth;
     private String mText;
+    private int bottomOffsetForLongCharacters = 10;
 
     private ArrayList<PageInfo> mPages = new ArrayList<>();
 
@@ -36,7 +36,7 @@ public class TalePager {
 
         mPadding = new Rect(mTextView.getPaddingStart(), mTextView.getPaddingTop(),
                 mTextView.getPaddingEnd(), mTextView.getPaddingBottom());
-        mHeight -= mPadding.top + mPadding.bottom + actionBarHeight;
+        mHeight -= mPadding.top + mPadding.bottom + bottomOffsetForLongCharacters + actionBarHeight;
         mWidth -= mPadding.left + mPadding.right;
     }
 
