@@ -5,13 +5,12 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.example.materialdesignapp.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by powerman23rus on 16.01.2018.
@@ -19,9 +18,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class ImageLoader extends FrameLayout {
-    private boolean mIsCircle = true;
+    private String mRatio;
     private ProgressBar mProgressBar;
-    private CircleImageView mCircleImageView;
+    private RatioImageView mRatioImageView;
 
     public ImageLoader(Context context) {
         super(context);
@@ -41,10 +40,10 @@ public class ImageLoader extends FrameLayout {
     public void initialize(String url) {
 
         mProgressBar.setVisibility(VISIBLE);
-        Picasso.with(getContext()).load(url).into(mCircleImageView, new Callback() {
+        Picasso.with(getContext()).load(url).into(mRatioImageView, new Callback() {
             @Override
             public void onSuccess() {
-                mCircleImageView.setVisibility(VISIBLE);
+                mRatioImageView.setVisibility(VISIBLE);
                 mProgressBar.setVisibility(INVISIBLE);
             }
 
@@ -56,9 +55,6 @@ public class ImageLoader extends FrameLayout {
     }
 
     private void setup(Context context, AttributeSet attrs, int defStyle) {
-        mCircleImageView = new CircleImageView(getContext());
-        mCircleImageView.setVisibility(INVISIBLE);
-        addView(mCircleImageView);
 
         mProgressBar = new ProgressBar(getContext());
         mProgressBar.setLayoutParams(new LayoutParams(200, 200, Gravity.CENTER));
@@ -68,10 +64,15 @@ public class ImageLoader extends FrameLayout {
 
         TypedArray ta = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.ImageLoader, 0, 0);
         try {
-            mIsCircle = ta.getBoolean(R.styleable.ImageLoader_isCircle, true);
-            mCircleImageView.setDisableCircularTransformation(!mIsCircle);
+            mRatio = ta.getString(R.styleable.ImageLoader_image_ratio);
         } finally {
             ta.recycle();
         }
+
+        mRatioImageView = new RatioImageView(getContext());
+        mRatioImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        mRatioImageView.setRatio(mRatio);
+        mRatioImageView.setVisibility(INVISIBLE);
+        addView(mRatioImageView);
     }
 }

@@ -15,9 +15,7 @@
     <com.example.materialdesignapp.ui.ImageLoader xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/thumbnail"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        app:isCircle="false" />
+        android:layout_height="200dp"/>
 
     <LinearLayout
         android:orientation="vertical"

@@ -13,5 +13,7 @@
 
     <!--list_item_article-->
     <dimen name="list_item_article_margins">8dp</dimen>
+    <dimen name="tale_cover_description_height">150dp</dimen>
+    <dimen name="tale_cover_description_top_padding">36dp</dimen>
 
 </resources>

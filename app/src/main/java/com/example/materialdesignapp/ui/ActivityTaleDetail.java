@@ -1,9 +1,7 @@
 package com.example.materialdesignapp.ui;
 
 import android.annotation.SuppressLint;
-import android.app.LoaderManager;
 import android.content.IntentFilter;
-import android.content.Loader;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,7 +10,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.LoaderManager;
 import android.support.v4.app.NavUtils;
+import android.support.v4.content.Loader;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -40,7 +40,6 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
     public final static int LOADER_TALE_PROGRESS = 1001;
 
     public final static String EXTRA_TALE_ID = "EXTRA_TALE_ID";
-    public final static String BUNDLE_TALE = "BUNDLE_TALE";
     public final static String BUNDLE_TALE_PROGRESS = "BUNDLE_TALE_PROGRESS";
 
     private long mTaleId;
@@ -69,7 +68,6 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
         }
 
         if (savedInstanceState != null) {
-            mTale = savedInstanceState.getParcelable(BUNDLE_TALE);
             mTaleProgress = savedInstanceState.getParcelable(BUNDLE_TALE_PROGRESS);
         }
 
@@ -113,7 +111,6 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putParcelable(BUNDLE_TALE, mTale);
         outState.putParcelable(BUNDLE_TALE_PROGRESS, mTaleProgress);
     }
 
@@ -196,6 +193,8 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
                 onTaleProgressLoaded();
                 break;
         }
+
+        cursor.close();
     }
 
     @Override
@@ -206,18 +205,19 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
     //endregion
 
     private void startTaleLoader() {
-        if (getLoaderManager().getLoader(LOADER_TALE) != null) {
-            getLoaderManager().initLoader(LOADER_TALE, null, ActivityTaleDetail.this);
+        Loader<Object> loader = getSupportLoaderManager().getLoader(LOADER_TALE);
+        if (loader != null && !loader.isReset()) {
+            getSupportLoaderManager().restartLoader(LOADER_TALE, null, ActivityTaleDetail.this);
         } else {
-            getLoaderManager().restartLoader(LOADER_TALE, null, ActivityTaleDetail.this);
+            getSupportLoaderManager().initLoader(LOADER_TALE, null, ActivityTaleDetail.this);
         }
     }
 
     private void startTaleProgressLoader() {
-        if (getLoaderManager().getLoader(LOADER_TALE_PROGRESS) != null) {
-            getLoaderManager().initLoader(LOADER_TALE_PROGRESS, null, ActivityTaleDetail.this);
+        if (getSupportLoaderManager().getLoader(LOADER_TALE_PROGRESS) != null) {
+            getSupportLoaderManager().restartLoader(LOADER_TALE_PROGRESS, null, ActivityTaleDetail.this);
         } else {
-            getLoaderManager().restartLoader(LOADER_TALE_PROGRESS, null, ActivityTaleDetail.this);
+            getSupportLoaderManager().initLoader(LOADER_TALE_PROGRESS, null, ActivityTaleDetail.this);
         }
     }
 

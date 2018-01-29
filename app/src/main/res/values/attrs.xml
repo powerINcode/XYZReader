@@ -1,10 +1,6 @@
 <resources>
-    <declare-styleable name="DrawInsetsFrameLayout">
-        <attr name="insetBackground" format="color|reference" />
-    </declare-styleable>
-
     <declare-styleable name="ImageLoader">
-        <attr name="isCircle" format="boolean"/>
+        <attr name="image_ratio" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="RatioImageView">

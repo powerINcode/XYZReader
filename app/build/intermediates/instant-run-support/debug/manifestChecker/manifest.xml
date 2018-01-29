@@ -30,19 +30,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.materialdesignapp.ui.ArticleDetailActivity"
-            android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity" />
-        <activity
-            android:name="com.example.materialdesignapp.ui.ArticleDetailActivity2"
+            android:name="com.example.materialdesignapp.ui.ActivityTaleDetail"
             android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="vnd.android.cursor.item/vnd.com.example.xyzreader.items" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.materialdesignapp.ui.ArticleListActivity" />
@@ -56,14 +45,15 @@
             android:name="com.example.materialdesignapp.data.AppContentProvider"
             android:authorities="com.example.materialdesignapp"
             android:exported="false" />
-
-        <activity
-            android:name="com.example.materialdesignapp.ui.ActivityTaleDetail"
-            android:parentActivityName="com.example.materialdesignapp.ui.ArticleListActivity" >
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.materialdesignapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.materialdesignapp.ui.ArticleListActivity" />
-        </activity>
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
 
         <meta-data
             android:name="android.support.VERSION"

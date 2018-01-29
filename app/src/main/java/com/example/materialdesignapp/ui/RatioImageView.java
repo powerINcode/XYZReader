@@ -42,17 +42,10 @@ public class RatioImageView extends ImageView {
             try {
                 String ratio = ta.getString(R.styleable.RatioImageView_ratio);
                 if (ratio == null || TextUtils.isEmpty(ratio)) {
-                    ratio = "1:1";
+                    return;
                 }
 
-                String[] splitRatio = ratio.split(":");
-
-                if (splitRatio.length != 2) {
-                    throw new IllegalArgumentException("Invalid aspect ratio arguments: " + splitRatio.length);
-                }
-
-                mWidthRatio = Integer.parseInt(splitRatio[0]);
-                mHeightRatio = Integer.parseInt(splitRatio[1]);
+                setRatio(ratio);
 
             } finally {
                 ta.recycle();
@@ -60,16 +53,13 @@ public class RatioImageView extends ImageView {
         }
     }
 
-//    @Override
-//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//
-//        setMeasuredDimension(getMeasuredWidth() * mWidthRatio, getMeasuredHeight() * mHeightRatio);
-//    }
-
-
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (mWidthRatio < 1 || mHeightRatio < 1) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+            return;
+        }
+
         int newWidth = MeasureSpec.getSize(heightMeasureSpec) * mWidthRatio / mHeightRatio;
         int newWidthSpec = MeasureSpec.makeMeasureSpec(newWidth, MeasureSpec.EXACTLY);
 
@@ -77,5 +67,20 @@ public class RatioImageView extends ImageView {
         int newHeightSpec = MeasureSpec.makeMeasureSpec(newHeight, MeasureSpec.EXACTLY);
 
         super.onMeasure(widthMeasureSpec, newHeightSpec);
+    }
+
+    public void setRatio(String ratio) {
+        if (ratio == null) {
+            return;
+        }
+
+        String[] splitRatio = ratio.split(":");
+
+        if (splitRatio.length != 2) {
+            throw new IllegalArgumentException("Invalid aspect ratio arguments: " + splitRatio.length);
+        }
+
+        mWidthRatio = Integer.parseInt(splitRatio[0]);
+        mHeightRatio = Integer.parseInt(splitRatio[1]);
     }
 }

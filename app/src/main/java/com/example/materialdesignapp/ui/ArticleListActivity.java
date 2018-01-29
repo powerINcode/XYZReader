@@ -1,16 +1,16 @@
 package com.example.materialdesignapp.ui;
 
 import android.annotation.SuppressLint;
-import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -73,7 +73,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 //                mScrollPosition += dy;
             }
         });
-        getLoaderManager().initLoader(0, null, this);
+        getSupportLoaderManager().initLoader(0, null, this);
 
         if (savedInstanceState != null) {
             mScrollPosition = savedInstanceState.getInt(BUNDLE_SCROLL_POSITION);

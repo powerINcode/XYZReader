@@ -8,14 +8,14 @@
     <com.example.materialdesignapp.ui.ImageLoader
         android:id="@+id/iv_photo"
         android:layout_width="match_parent"
-        app:isCircle="false"
+        app:image_ratio="@string/cover_image_ratio"
         android:layout_height="match_parent">
     </com.example.materialdesignapp.ui.ImageLoader>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cl_tale_content"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/tale_cover_description_height"
         android:background="?colorPrimaryDark"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="@dimen/tale_cover_description_top_padding"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@android:color/white"
             android:textSize="30sp"

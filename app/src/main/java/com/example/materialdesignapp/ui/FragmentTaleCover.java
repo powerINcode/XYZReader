@@ -3,11 +3,10 @@ package com.example.materialdesignapp.ui;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ShareCompat;
+import android.support.v4.content.FileProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.materialdesignapp.R;
+import com.example.materialdesignapp.data.FileContract;
 import com.example.materialdesignapp.data.Tale;
 import com.example.materialdesignapp.utils.ViewUtil;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 /**
  * Created by powerman23rus on 23.01.2018.
@@ -60,15 +62,22 @@ public class FragmentTaleCover extends Fragment {
         mShareFloatingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                File shareFile = new File(Environment.getExternalStorageDirectory().toString() + "/" + mTale.getTitle() + ".txt");
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/*");
-                sharingIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + shareFile.getAbsolutePath()));
-                sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                startActivity(Intent.createChooser(sharingIntent, "share file with"));
+                try {
+                    File tale = generateTaleFile(mTale.getTitle());
 
-                if (sharingIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-                    startActivity(sharingIntent);
+                    Uri taleUri = FileProvider.getUriForFile(getContext(), FileContract.AUTHORITY, tale);
+
+                    Intent sharingIntent = new Intent(Intent.ACTION_VIEW);
+                    sharingIntent.setDataAndType(taleUri, getContext().getContentResolver().getType(taleUri));
+                    sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    startActivity(Intent.createChooser(sharingIntent, "share file with"));
+
+                    if (sharingIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                        startActivity(sharingIntent);
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(getContext(), R.string.share_error, Toast.LENGTH_SHORT).show();
+                    return;
                 }
             }
         });
@@ -88,6 +97,26 @@ public class FragmentTaleCover extends Fragment {
         }
 
         return view;
+    }
+
+    private File generateTaleFile(String taleName) throws IOException {
+        File cacheTalesDir = new File(getContext().getCacheDir() + "/" + FileContract.CacheFiles.PATH_TALES);
+
+        if (!cacheTalesDir.exists()) {
+            cacheTalesDir.mkdir();
+        }
+
+        File tale = new File(cacheTalesDir.getAbsolutePath() + "/" + taleName + ".txt");
+        if (!tale.exists()) {
+            tale.createNewFile();
+
+            FileOutputStream fOut = new FileOutputStream(tale);
+            OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
+            myOutWriter.append(mTale.getBody());
+            myOutWriter.close();
+        }
+
+        return tale;
     }
 
     @Override

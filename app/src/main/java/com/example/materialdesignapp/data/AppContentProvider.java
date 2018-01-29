@@ -19,8 +19,8 @@ import java.util.List;
 public class AppContentProvider extends ContentProvider {
     private SQLiteOpenHelper mOpenHelper;
 
-    public static final String CONTENT_AUTHORITY = "com.example.materialdesignapp";
-    public static final Uri BASE_URI = Uri.parse("content://" + AppContentProvider.CONTENT_AUTHORITY);
+    public static final String AUTHORITY = "com.example.materialdesignapp";
+    public static final Uri BASE_URI = Uri.parse("content://" + AppContentProvider.AUTHORITY);
 
     interface Tables {
         String ITEMS = "items";
@@ -37,9 +37,9 @@ public class AppContentProvider extends ContentProvider {
     private static UriMatcher buildUriMatcher() {
         final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-        matcher.addURI(CONTENT_AUTHORITY, "items", ITEMS);
-        matcher.addURI(CONTENT_AUTHORITY, "items/#", ITEMS__ID);
-        matcher.addURI(CONTENT_AUTHORITY, TaleProgressContract.PATH_TALE_PROGRESS + "/#", TALE_PROGRESS_WITH_ID);
+        matcher.addURI(AUTHORITY, "items", ITEMS);
+        matcher.addURI(AUTHORITY, "items/#", ITEMS__ID);
+        matcher.addURI(AUTHORITY, TaleProgressContract.PATH_TALE_PROGRESS + "/#", TALE_PROGRESS_WITH_ID);
 
 
         return matcher;
