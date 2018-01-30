@@ -5,12 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <com.example.xyzreader.ui.ImageLoader
+    <com.example.xyzreader.ui.customViews.ImageLoader
         android:id="@+id/iv_photo"
         android:layout_width="match_parent"
         app:image_ratio="@string/cover_image_ratio"
         android:layout_height="match_parent">
-    </com.example.xyzreader.ui.ImageLoader>
+    </com.example.xyzreader.ui.customViews.ImageLoader>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cl_tale_content"
