@@ -4,14 +4,13 @@ import android.app.IntentService;
 import android.content.ContentProviderOperation;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.OperationApplicationException;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.os.RemoteException;
 import android.text.format.Time;
 import android.util.Log;
 
+import com.example.xyzreader.R;
 import com.example.xyzreader.data.providers.AppContentProvider;
 import com.example.xyzreader.data.providers.ItemsContract;
 import com.example.xyzreader.remote.RemoteEndpointUtil;
@@ -29,6 +28,8 @@ public class UpdaterService extends IntentService {
             = "com.example.xyzreader.intent.action.STATE_CHANGE";
     public static final String EXTRA_REFRESHING
             = "com.example.xyzreader.intent.extra.REFRESHING";
+    public static final String EXTRA_ERROR
+            = "com.example.xyzreader.intent.extra.ERROR";
 
     public UpdaterService() {
         super(TAG);
@@ -37,6 +38,7 @@ public class UpdaterService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         Time time = new Time();
+        String error = null;
 
         ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
@@ -77,12 +79,14 @@ public class UpdaterService extends IntentService {
             }
 
             getContentResolver().applyBatch(AppContentProvider.AUTHORITY, cpo);
-
-        } catch (JSONException | RemoteException | OperationApplicationException e) {
+        } catch (Exception e) {
             Log.e(TAG, "Error updating content.", e);
+            error = getString(R.string.error_message);
         }
 
         sendStickyBroadcast(
-                new Intent(BROADCAST_ACTION_STATE_CHANGE).putExtra(EXTRA_REFRESHING, false));
+                new Intent(BROADCAST_ACTION_STATE_CHANGE)
+                        .putExtra(EXTRA_REFRESHING, false)
+                        .putExtra(EXTRA_ERROR, error));
     }
 }

@@ -14,6 +14,7 @@
     <string name="by">by</string>
     <string name="share_error">Ops! Can\'t share the tail</string>
     <string name="share_title">Share file with</string>
+    <string name="error_message">Ops! Try again later.</string>
 
 
 </resources>

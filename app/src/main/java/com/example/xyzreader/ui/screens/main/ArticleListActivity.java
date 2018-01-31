@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -110,6 +111,12 @@ public class ArticleListActivity extends AppCompatActivity implements
         public void onReceive(Context context, Intent intent) {
             if (UpdaterService.BROADCAST_ACTION_STATE_CHANGE.equals(intent.getAction())) {
                 mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
+                String error = intent.getStringExtra(UpdaterService.EXTRA_ERROR);
+
+                if (error != null) {
+                    Snackbar.make(ArticleListActivity.this.findViewById(android.R.id.content), error, Snackbar.LENGTH_SHORT).show();
+                }
+
                 updateRefreshingUI();
             }
         }
