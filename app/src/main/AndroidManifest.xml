@@ -15,6 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor">
+        <meta-data android:name="net.hockeyapp.android.appIdentifier" android:value="${HOCKEYAPP_APP_ID}" />
         <activity
             android:name="com.example.xyzreader.ui.screens.main.ArticleListActivity"
             android:label="@string/app_name">

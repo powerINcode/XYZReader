@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [HOCKEYAPP_APP_ID: "$HOCKEY_APP_IDENTIFIER"]
     }
     buildTypes {
         release {
@@ -32,6 +33,7 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.jetbrains:annotations-java5:15.0'
+    compile 'net.hockeyapp.android:HockeySDK:5.1.0'
 
     androidTestCompile 'com.android.support.test:rules:1.0.1'
     androidTestCompile "com.android.support:support-annotations:$androidSupportVersion"

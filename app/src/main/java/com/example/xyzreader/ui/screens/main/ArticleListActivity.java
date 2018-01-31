@@ -26,6 +26,8 @@ import com.example.xyzreader.ui.screens.taleDetail.ActivityTaleDetail;
 import com.example.xyzreader.ui.customViews.ImageLoader;
 import com.example.xyzreader.utils.ViewUtil;
 
+import net.hockeyapp.android.CrashManager;
+
 /**
  * An activity representing a list of Articles. This activity has different presentations for
  * handset and tablet-size devices. On handsets, the activity presents a list of items, which when
@@ -44,6 +46,13 @@ public class ArticleListActivity extends AppCompatActivity implements
     private int mScrollPosition = 0;
     private boolean mIsRefreshing = false;
     private boolean mIsAnimationShown = false;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        CrashManager.register(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -23,6 +23,7 @@ allprojects {
 
     ext {
         androidSupportVersion = "26.1.0"
+        HOCKEY_APP_IDENTIFIER = "8b0a1f8cfabb487390ef52f547a79c62"
     }
 }
 
