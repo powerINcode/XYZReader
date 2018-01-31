@@ -64,14 +64,15 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
     private FragmentTaleCover mTaleCoverFragment;
     private FragmentTalePage mPageFragment;
 
-    public Tale getTale() {
-        return mTale;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tale_detail);
+
+        mToolbar = findViewById(R.id.toolbar);
+        mToolbar.setVisibility(View.GONE);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (getIntent() != null) {
             mTaleId = getIntent().getLongExtra(EXTRA_TALE_ID, 0);
@@ -80,11 +81,6 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
         if (savedInstanceState != null) {
             mTaleProgress = savedInstanceState.getParcelable(BUNDLE_TALE_PROGRESS);
         }
-
-        mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setVisibility(View.GONE);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mPageTextView = findViewById(R.id.tv_page);
         mViewPager = findViewById(R.id.pager);
@@ -255,6 +251,7 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
 
     @SuppressLint("StaticFieldLeak")
     private void onTaleLoaded() {
+        getSupportActionBar().setTitle(mTale.getTitle());
         TypedValue tv = new TypedValue();
         int actionBarHeight = 0;
 
