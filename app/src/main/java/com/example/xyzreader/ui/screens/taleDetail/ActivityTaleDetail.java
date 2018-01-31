@@ -336,7 +336,7 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
 
         @Override
         public int getCount() {
-            return mTalePager == null ? 0 : mTalePager.getPageCount() + TALE_COVER_OFFSET;
+            return mTalePager == null || !mTalePager.isTextProcessed() ? 0 : mTalePager.getPageCount() + TALE_COVER_OFFSET;
         }
 
 

@@ -24,6 +24,7 @@ public class TalePager {
     private int mWidth;
     private String mText;
     private int bottomOffsetForLongCharacters = 10;
+    private boolean mIsTextProcessed;
 
     private ArrayList<PageInfo> mPages = new ArrayList<>();
 
@@ -48,6 +49,10 @@ public class TalePager {
 
     public int getPageCount() {
         return mPages.size();
+    }
+
+    public boolean isTextProcessed() {
+        return mIsTextProcessed;
     }
 
     public void processText() {
@@ -75,6 +80,8 @@ public class TalePager {
                 break;
             }
         }
+
+        mIsTextProcessed = true;
     }
 
     public PageProperties getPageProperties() {
