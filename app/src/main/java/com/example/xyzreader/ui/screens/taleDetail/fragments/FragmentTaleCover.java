@@ -30,6 +30,10 @@ import java.io.OutputStreamWriter;
  */
 
 public class FragmentTaleCover extends Fragment {
+    public interface FragmentCoverEvent {
+        void onShareTap(FragmentTaleCover sender);
+    }
+
     private final static String BUNDLE_TALE = "BUNDLE_TALE";
     private Tale mTale;
     private TextView mTitleTextView;
@@ -38,6 +42,7 @@ public class FragmentTaleCover extends Fragment {
     private ImageLoader mImageLoader;
     private FloatingActionButton mShareFloatingButton;
     private ViewGroup mDescriptionContainer;
+    private FragmentCoverEvent mEventListener;
 
     public static FragmentTaleCover getFragment(Tale tale) {
         Bundle bundle = new Bundle();
@@ -49,12 +54,8 @@ public class FragmentTaleCover extends Fragment {
         return fragment;
     }
 
-    public void setTale(Tale tale) {
-        mTale = tale;
-
-        if (isAdded()) {
-            updateView();
-        }
+    public void setEventListener(FragmentCoverEvent e) {
+        mEventListener = e;
     }
 
     @Nullable
@@ -73,21 +74,8 @@ public class FragmentTaleCover extends Fragment {
         mShareFloatingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    File tale = generateTaleFile(mTale.getTitle());
-
-                    Uri taleUri = FileProvider.getUriForFile(getContext(), FileContract.AUTHORITY, tale);
-
-                    Intent sharingIntent = new Intent(Intent.ACTION_VIEW);
-                    sharingIntent.setDataAndType(taleUri, getContext().getContentResolver().getType(taleUri));
-                    sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-                    if (sharingIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-                        startActivity(sharingIntent);
-                    }
-                } catch (Exception e) {
-                    Toast.makeText(getContext(), R.string.share_error, Toast.LENGTH_SHORT).show();
-                    return;
+                if (mEventListener != null) {
+                    mEventListener.onShareTap(FragmentTaleCover.this);
                 }
             }
         });
@@ -107,27 +95,6 @@ public class FragmentTaleCover extends Fragment {
 
             mImageLoader.initialize(mTale.getPhoto());
         }
-    }
-
-    private File generateTaleFile(String taleName) throws IOException {
-        File cacheTalesDir = new File(getContext().getCacheDir() + "/" + FileContract.CacheFiles.PATH_TALES);
-
-        if (!cacheTalesDir.exists()) {
-            cacheTalesDir.mkdir();
-        }
-
-        File tale = new File(cacheTalesDir.getAbsolutePath() + "/" + taleName + ".txt");
-        if (!tale.exists()) {
-            tale.createNewFile();
-            tale.deleteOnExit();
-
-            FileOutputStream fOut = new FileOutputStream(tale);
-            OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
-            myOutWriter.append(mTale.getBody());
-            myOutWriter.close();
-        }
-
-        return tale;
     }
 
     @Override

@@ -1,7 +1,9 @@
 package com.example.xyzreader.ui.screens.taleDetail;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.app.NavUtils;
+import android.support.v4.content.FileProvider;
 import android.support.v4.content.Loader;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -17,10 +20,12 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.loaders.ArticleLoader;
 import com.example.xyzreader.data.models.Tale;
+import com.example.xyzreader.data.providers.FileContract;
 import com.example.xyzreader.ui.screens.taleDetail.fragments.FragmentTaleCover;
 import com.example.xyzreader.ui.screens.taleDetail.fragments.FragmentTalePage;
 import com.example.xyzreader.utils.TalePager;
@@ -29,7 +34,13 @@ import com.example.xyzreader.data.providers.TaleProgressContract.TaleProgressEnt
 import com.example.xyzreader.data.loaders.TaleProgressLoader;
 import com.example.xyzreader.utils.ViewUtil;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
 public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.OnPageChangeListener,
+        FragmentTaleCover.FragmentCoverEvent,
         LoaderManager.LoaderCallbacks<Cursor>{
 
     private static final int TALE_START_INDEX = -1;
@@ -238,7 +249,6 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
             mAdapter.notifyDataSetChanged();
         }
 
-
         mViewPager.setVisibility(View.VISIBLE);
         mIsTaleRewind = true;
     }
@@ -266,10 +276,6 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
             protected void onPostExecute(Void aVoid) {
                 mAdapter.notifyDataSetChanged();
 
-                if (mTaleCoverFragment != null) {
-                    mTaleCoverFragment.setTale(mTale);
-                }
-
                 if (mTaleProgress == null) {
                     startTaleProgressLoader();
                 } else {
@@ -277,6 +283,47 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
                 }
             }
         }.execute();
+    }
+
+    @Override
+    public void onShareTap(FragmentTaleCover sender) {
+        try {
+            File tale = generateTaleFile(mTale.getTitle(), mTale.getBody());
+
+            Uri taleUri = FileProvider.getUriForFile(this, FileContract.AUTHORITY, tale);
+
+            Intent sharingIntent = new Intent(Intent.ACTION_VIEW);
+            sharingIntent.setDataAndType(taleUri, getContentResolver().getType(taleUri));
+            sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+            if (sharingIntent.resolveActivity(getPackageManager()) != null) {
+                startActivity(sharingIntent);
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, R.string.share_error, Toast.LENGTH_SHORT).show();
+            return;
+        }
+    }
+
+    private File generateTaleFile(String taleName, String text) throws IOException {
+        File cacheTalesDir = new File(getCacheDir() + "/" + FileContract.CacheFiles.PATH_TALES);
+
+        if (!cacheTalesDir.exists()) {
+            cacheTalesDir.mkdir();
+        }
+
+        File tale = new File(cacheTalesDir.getAbsolutePath() + "/" + taleName + ".txt");
+        if (!tale.exists()) {
+            tale.createNewFile();
+            tale.deleteOnExit();
+
+            FileOutputStream fOut = new FileOutputStream(tale);
+            OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
+            myOutWriter.append(text);
+            myOutWriter.close();
+        }
+
+        return tale;
     }
 
     class PageAdapter extends FragmentStatePagerAdapter {
@@ -300,6 +347,7 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
         public Fragment getItem(int position) {
             if (position == 0) {
                 mTaleCoverFragment = FragmentTaleCover.getFragment(mTale);
+                mTaleCoverFragment.setEventListener(ActivityTaleDetail.this);
                 return mTaleCoverFragment;
             } else {
                 return FragmentTalePage.getFragment(mTalePager.getPage(position - TALE_COVER_OFFSET), mTalePager.getPageProperties());
