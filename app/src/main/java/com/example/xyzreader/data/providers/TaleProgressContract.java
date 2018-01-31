@@ -30,9 +30,10 @@ public class TaleProgressContract {
         public final static String TALE_ID = "tale_id";
         public final static String PAUSE_INDEX = "pause_index";
 
-        public static long create(ContentResolver contentResolver, long taleId) {
+        public static long create(ContentResolver contentResolver, long taleId, int pauseIndex) {
             ContentValues cv = new ContentValues();
             cv.put(TALE_ID, taleId);
+            cv.put(PAUSE_INDEX, pauseIndex);
             Uri insertUri = contentResolver.insert(buildTaleProgressUri(taleId), cv);
 
             return ContentUris.parseId(insertUri);

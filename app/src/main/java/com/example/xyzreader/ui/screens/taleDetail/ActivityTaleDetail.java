@@ -191,7 +191,7 @@ public class ActivityTaleDetail extends AppCompatActivity implements ViewPager.O
                     break;
             case LOADER_TALE_PROGRESS:
                 if (cursor.getCount() == 0) {
-                    long id = TaleProgressEntry.create(getContentResolver(), mTaleId);
+                    long id = TaleProgressEntry.create(getContentResolver(), mTaleId, TALE_START_INDEX);
                     mTaleProgress = new TaleProgress(id, mTaleId, TALE_START_INDEX);
                 } else {
                     mTaleProgress = new TaleProgress(cursor);
